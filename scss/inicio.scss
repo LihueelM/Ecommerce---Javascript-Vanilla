@@ -1,0 +1,39 @@
+.banner{
+    h2{
+        margin-bottom: 1rem;
+    }
+    margin-top: -56px;
+    height: 100vh;
+    background: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center center;
+    .quienesSomos{
+        color: #F2F2F2;
+        position: relative;
+        top: 13%;
+        left: 8%;
+        width: 45rem;
+        font-size: 1.6rem;
+    }
+    .btnInicio{
+        position: relative;
+        top:22%;
+        left: 8%;
+        height: 4rem;
+        width: 20rem;
+        font-weight: 600;
+        border-radius: 1rem;
+        border: none;
+        outline: none;
+        background-color: #CDBE78;
+        color: #383838;
+        font-size: 1.5rem;
+        transition: .5s;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+}
