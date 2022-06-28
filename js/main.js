@@ -1,29 +1,44 @@
-const ingreso = () => {
+//-------------Login-------------
 
-    let edad = parseInt(prompt("Ingrese su edad:"));
+function login (edad) {
 
-    if(edad >= 18 ) {
-        return true;
-
-    }else{
-        return false;
+    if(edad >= 18){
+        return true
+    }
+    else{
+        return false
     }
 }
 
-let resultado = ingreso();
+if(login(parseInt(prompt("Ingrese su edad: ")))){
+    alert("Bienvenido");
+    compra(parseInt(prompt("Ingrese 1 si quiere fernet $720. Ingrese 2 si quiere gancia $640.")), parseInt(prompt("Ingrese que cantidad desea comprar:")))
 
-const validacion = () => {
+}
+else{
+    alert("No puede ingresar");
+    
+}
+//-------------Compra-------------
 
-    if (resultado == true){        
-        alert("Puede ingresar")
-        let usuario = prompt("Ingrese su usuario");
-        alert("Bienvenido: " + usuario);    
+function compra (bebida, cantidad){
 
-    }else{
-        alert("Debe ser mayor de 18 para ingresar.")
+    if(bebida == 1){
+
+        let resultado = "Usted comprara " + cantidad + " Unidades Fernet"
+        alert(resultado);
+        alert("El valor total de la compra es de: $" + cantidad * 720 );
+    }
+    else if(bebida == 2){
+
+        let resultado = "Usted comprara " + cantidad + " Unidades Gancia"
+        alert(resultado);
+        alert("El valor total de la compra es de: $" + cantidad * 640 );
+    }
+    else{
+        alert("Por favor seleccione una de las 2 bebidas")
+        
     }
 }
 
-
-validacion();
 
