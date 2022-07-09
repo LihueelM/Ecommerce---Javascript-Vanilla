@@ -1,4 +1,4 @@
-//-------------Login-------------
+/* //-------------Login-------------
 
 function login (edad) {
 
@@ -39,6 +39,38 @@ function compra (bebida, cantidad){
         alert("Por favor seleccione una de las 2 bebidas")
         
     }
+} */
+
+/* Complementario n°2 implementacion de arrays*/
+
+/* Creo la info del stock para poder tener referencia de que bebida tenemos a la venta, precio, id y stock disponible */
+
+class Bebida{
+    constructor(id,nombre,precio,stock){
+        this.id = id;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.stock = stock;
+    }
 }
+
+let listaBebidas = [];
+
+listaBebidas.push(new Bebida (01 , "Fernet", "$1150" , 25));
+listaBebidas.push(new Bebida (02 , "Gancia", "$940" , 20));
+listaBebidas.push(new Bebida (03 , "Vodka", "$1300" , 28));
+listaBebidas.push(new Bebida (04 , "Gin Tonic", "$1850" , 16));
+
+for(let bebidas of listaBebidas){
+    console.log(bebidas);
+}
+
+
+
+
+
+
+
+
 
 
