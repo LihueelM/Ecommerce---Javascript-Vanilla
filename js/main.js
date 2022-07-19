@@ -1,104 +1,48 @@
-//-------------Login-------------
+/* Creamos la lista de objetos que representar los productos a la venta y el carrito */
+let listaBebidas = [];
+let carrito = [];
 
-function login (edad) {
-
-    if(edad >= 18){
-        return true
-    }
-    else{
-        return false
-    }
-}
-
-if(login(parseInt(prompt("Ingrese su edad: ")))){
-    alert("Bienvenido");
-}
-else{
-    alert("No puede ingresar");
-    
-}
-
-// Complementario n°2 implementacion de arrays
-
-//Creo la info del stock para poder tener referencia de que bebida tenemos a la venta, precio, id y stock disponible
-
-class Bebida{
-    constructor(id,nombre,precio,stock){
+class Bebida {
+    constructor (id, nombre, precio, stock, img){
+        this.img = img;
         this.id = id;
         this.nombre = nombre;
-        this.precio = precio;
         this.stock = stock;
+        this.precio = precio;
     }
 }
 
-let listaBebidas = [];
+listaBebidas.push(new Bebida (01 , "Gin", 2200 , 10 , "./images/gintonic.jpg"));
+listaBebidas.push(new Bebida (02 , "Fernet", 1600 , 10 , "./images/fernet.jpg"));
+listaBebidas.push(new Bebida (03 , "Martini Bianco", 1400 , 10, "./images/martini.jpg"));
+listaBebidas.push(new Bebida (04 , "Gancia", 1000 , 10 , "./images/gancia.jpg"));
+listaBebidas.push(new Bebida (05 , "Havana Club" , 2600 , 10 , "./images/Ron.jpg"));
+listaBebidas.push(new Bebida (06 , "Absolut Vodka" , 3200 , 10 , "./images/vodka.jpg"));
 
-listaBebidas.push(new Bebida (01 , "Fernet", 1150 , 25));
-listaBebidas.push(new Bebida (02 , "Gancia", 940 , 20));
-listaBebidas.push(new Bebida (03 , "Vodka", 1300 , 28));
-listaBebidas.push(new Bebida (04 , "Gin Tonic", 1850 , 16));
+console.log(listaBebidas);
 
-for(let bebidas of listaBebidas){
-    console.log(bebidas);
+/* Capturo el contenedor principal de las card y las creo en el DOM */
+let contenedor_card = document.getElementById("contenedor_card");
+
+listaBebidas.forEach((element) => {
+    let div = document.createElement("div")
+    div.innerHTML=`            
+                <img src="${element.img}" alt="...">
+                <h3 class ="card_title">${element.nombre}</h3>
+                <p class ="price_card">$${element.precio}</p>
+                <p class ="stock">Unidades disponibles:  ${element.stock} <p/>                 
+                <button id="id${element.id}">Agregar al carrito</button>
+                `
+    contenedor_card.appendChild(div);
+/* Tomo el elemento boton para luego agregarle el evento que activa la funcion de agregar_carrito */
+    let boton_agregar = document.getElementById( `id${element.id}` );
+    boton_agregar.addEventListener("click", () => { agregar_carrito(element.id) });
+});
+
+/* Creo una funcion que encuentre en la lista el mismo valor de id y lo agrego a carrito */
+function agregar_carrito(bebidaId){
+    let item = listaBebidas.find((element) => element.id === bebidaId);
+    carrito.push(item);
+    console.log(carrito);
 }
-
-// Entrega de trabajo final n°1 
-
-//En esta parte creare una funcionalidad donde el comprador podra elegir que bebida comprar y mediante un console.log se mostrara la bebida comprada.
-//Tambien se mostrara el stock inicial antes de la compra y el stock luego de esa misma compra para tener un seguimiento del stock.
-
-//-------------Compra-------------
-
-//Seleccion de que bebida quiere comprar
-
-let seleccion = parseInt(prompt("Elija que opcion quiere comprar: \n"+"Fernet : 1\nGancia: 2\nVodka: 3\nGin Tonic: 4 "));
-
-    //Creo la funcion para buscar la bebida solicitada
-    let buscarBebida = (bebida) => { return bebida.id == seleccion }
-    
-    //Traigo la seleccion
-    let bebidaEncontrada = listaBebidas.find(buscarBebida);
-
-    //Si hay stock permite que siga la compra
-    if(bebidaEncontrada.stock <= 0){
-
-        alert("No hay stock")
-        
-    }
-    else{
-
-        //Se informa que se esta comprando, el valor y se pregunta cuantas unidades quiere ordenar
-        let compra = parseInt(prompt(( "La bebida que a elegido es: " +  bebidaEncontrada.nombre  + "\nEl valor por unidad es de: " + bebidaEncontrada.precio + "\nCuantas bebidas quiere ordenar?")));
-        let verificacion = prompt("Usted va a ordernar " + compra + bebidaEncontrada.nombre + " El total es de: " + (bebidaEncontrada.precio * compra) +  " Es correcto? SI | NO").toUpperCase();
-        //Se actualiza el stock
-        if(verificacion == "SI"){
-
-            let nuevoStock = bebidaEncontrada.stock - compra;
-            bebidaEncontrada.stock = nuevoStock;          
-            //Descuento la cantidad de unidades que se compraron.
-            console.log("Nuevo stock es: " + bebidaEncontrada.stock);
-            //Verifico que el objeto se haya actualizado.
-            console.log(bebidaEncontrada);
-        }
-        else{
-            alert("Se cancela la compra")
-        }      
-
-    }
-    
-
-    
-
-    
-    
-
-    
-
-
-
-
- 
-
-
-
 
