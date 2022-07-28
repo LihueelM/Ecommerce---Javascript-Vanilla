@@ -7,6 +7,7 @@
 }
 body {
     font-family: 'Didact Gothic', sans-serif; 
+    background-color: rgb(118, 8, 8);
 }
 
 
@@ -24,12 +25,27 @@ img{
     height: 100%;
     border-radius: 1rem;
 }
+header{
+    background-color:rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(32px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 #portada_inicio{
+    margin-top: -55.97px;
     height: 100vh;
     width: 100%;
-    background: url(/assets/banner.jpg);
+    background: url(../assets/banner.jpg);
     background-size: cover;
     background-position: center center;
+}
+#descripcion_inicio h4{
+    position: absolute;
+    top: 10rem;
+    left: 2rem;
+    width: 50%;
+    color: white;  
 }
 .titulo_productos{
     font-size: 3rem;
@@ -37,8 +53,7 @@ img{
     text-align: center;
 }
 .card{
-    background-color: rgba(70, 69, 69, 0.1);
-
+    background-color: #ffc107;
 }
 .card-body{   
     text-align: center;
@@ -58,4 +73,10 @@ img{
 }
 .card-text{
     font-size: 1.2rem;
+}
+.css_btn{
+    color: #000;
+    width: 3rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
 }

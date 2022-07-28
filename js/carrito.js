@@ -12,7 +12,7 @@ listaProductos.forEach((e) => {
                         <h5 class="card-title">${e.nombre}</h5>
                         <p class="card-text">$${e.precio}</p>
                         <p class="card-text">Disponibles: ${e.stock}</p>
-                        <button id = "id${e.id}" class = "btn-warning btn_item">Agregar al carrito</button>
+                        <button id = "id${e.id}" class = "btn-danger btn_item">Agregar al carrito</button>
                     </div>
                 </div>                       
                 `
@@ -51,9 +51,9 @@ let actualizar_carrito = () => {
         <td class = "new_td">${e.nombre}</td>
         <td class = "new_td">${e.cantidad}</td>
         <td class = "new_td">$${e.precio}</td>
-        <td class = "new_td"><button onclick="eliminar_del_carrito(${e.id})"class="btn-danger borrar_item">Borrar</button></td>
-        <td class = "new_td"><button onclick="agregar_al_carrito(${e.id})"class="btn-warning">+</button></td>
-        <td class = "new_td"><button onclick="restar_item(${e.id})"class="btn-warning">-</button></td>
+        <td class = "new_td "><button onclick="eliminar_del_carrito(${e.id})"class="btn-danger borrar_item css_btn">Borrar</button></td>
+        <td class = "new_td "><button onclick="agregar_al_carrito(${e.id})"class="btn-warning css_btn">+</button></td>
+        <td class = "new_td "><button onclick="restar_item(${e.id})"class="btn-warning css_btn">-</button></td>
         `    
         contenedor_carrito.appendChild(fila);  
         localStorage.setItem('carrito', JSON.stringify(carrito));   
@@ -67,7 +67,6 @@ let eliminar_del_carrito = (e_id) => {
 
     actualizar_carrito();
 }
-/* Todavia tengo que corregir un error sobre esta funcion */
 let restar_item = (e) => {
     let test = carrito.some((item)=> item.id === e);
     if(test){
@@ -76,8 +75,8 @@ let restar_item = (e) => {
             if(item.id === e && item.cantidad > 1){
                 item.cantidad--
             }
-            else{
-                eliminar_del_carrito()
+            else if(item.id === e && item.cantidad < 1){
+                eliminar_del_carrito();
             }
         })
     }
