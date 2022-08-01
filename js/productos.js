@@ -12,12 +12,12 @@ class bebida {
     }
 }
 
-listaBebidas.push(new bebida (1 , "Absolut" , 3000 , 10 , "assets/vodka.jpg" , "bebidas_blancas" , 1))
-listaBebidas.push(new bebida (2 , "Fernet" , 3000 , 10 , "assets/fernet.jpg" , "aperitivo" ,1))
-listaBebidas.push(new bebida (3 , "Gancia" , 3000 , 10 , "assets/gancia.jpg" , "aperitivo" ,1 ))
-listaBebidas.push(new bebida (4 , "Martini" , 3000 , 10 , "assets/martini.jpg" , "licores" ,1))
-listaBebidas.push(new bebida (5 , "Havana club"  , 3000 , 10 , "assets/ron.jpg" , "licores",1))
-listaBebidas.push(new bebida (6 , "Bombay" , 3000 , 10 , "assets/gin.jpg" , "bebidas_blancas",1))
+listaBebidas.push(new bebida (1 , "Absolut" , 3000 , 10 , "./assets/vodka.jpg" , "bebidas_blancas" , 1))
+listaBebidas.push(new bebida (2 , "Fernet" , 3000 , 10 , "./assets/fernet.jpg" , "aperitivo" ,1))
+listaBebidas.push(new bebida (3 , "Gancia" , 3000 , 10 , "./assets/gancia.jpg" , "aperitivo" ,1 ))
+listaBebidas.push(new bebida (4 , "Martini" , 3000 , 10 , "./assets/martini.jpg" , "licores" ,1))
+listaBebidas.push(new bebida (5 , "Havana club"  , 3000 , 10 , "./assets/ron.jpg" , "licores",1))
+listaBebidas.push(new bebida (6 , "Bombay" , 3000 , 10 , "./assets/gin.jpg" , "bebidas_blancas",1))
 
 
 
