@@ -1,14 +1,78 @@
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    list-style: none;
-    text-decoration: none; 
+    font-style: none;
+    text-decoration: none;
 }
-body {
-    font-family: 'Didact Gothic', sans-serif; 
-    background-color: rgb(118, 8, 8);
+body{
+    height: 100vh;
+    width: 100%;
+    background: url(../assets/banner.jpg);
+    background-size: cover;
+    background-position: center center;
 }
+
+#navbar_css{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(15px);  
+    width: 75%;  
+}
+#navbar_css nav a{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: flex;
+}
+#main_container{
+    display: grid;
+    grid-template-columns: 75% 25%;       
+}
+#main_container_card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    align-items: center; 
+
+}
+#presentacion_inicial{
+    position: relative;
+    top: 25%;
+    left: 25%;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    width: 50%;
+    font-weight: 600;    
+}
+
+#render_carrito{
+    background-color: rgba(35, 0, 0, 0.3);
+    backdrop-filter: blur(20px); 
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    margin-top: -60.8px;
+    z-index: 100;
+    border-left: 1px solid rgba(150, 0, 0, 0.2);
+}
+#render_carrito tr td{
+    background-color: rgba(0, 0, 0, 0.0);   
+}
+
+.card{
+    width: 75%;        
+    background-color: rgba(136, 136, 136, 0.1);
+    backdrop-filter: blur(20px);
+    color: #fff;
+    text-align: center;   
+    align-self: center;
+    justify-self: center; 
+}
+
 
 
 td{
@@ -25,58 +89,12 @@ img{
     height: 100%;
     border-radius: 1rem;
 }
-header{
-    background-color:rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(32px);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-#portada_inicio{
-    margin-top: -55.97px;
-    height: 100vh;
-    width: 100%;
-    background: url(../assets/banner.jpg);
-    background-size: cover;
-    background-position: center center;
-}
-#descripcion_inicio h4{
-    position: absolute;
-    top: 10rem;
-    left: 2rem;
-    width: 50%;
-    color: white;  
-}
-.titulo_productos{
-    font-size: 3rem;
-    font-weight: 400;
-    text-align: center;
-}
-.card{
-    background-color: #ffc107;
-}
-.card-body{   
-    text-align: center;
-}
-.btn_item{
-    border-radius: 0.5rem;
-    font-weight: 800;
-    padding: 0.5rem;
-}
-.card-img-top{
-    align-self: center;
-    width: 85%;
-}
-.card-title{
-    font-size: 1.5rem;
-    font-weight: 800;
-}
-.card-text{
-    font-size: 1.2rem;
-}
+
 .css_btn{
-    color: #000;
-    width: 3rem;
-    height: 2.5rem;
-    border-radius: 0.5rem;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgba(150, 0, 0, 0.6);
 }

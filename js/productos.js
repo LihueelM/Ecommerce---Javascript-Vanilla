@@ -1,23 +1,24 @@
-/* Creo la lista de productos y mediante una clase instancio los nuevos objetos */
-let listaProductos = [];
+let listaBebidas = [];
 
-class producto {
-    constructor (id, nombre, stock, precio, img,cantidad){
+class bebida {
+    constructor (id , nombre, precio, stock, img, categoria,und ){
         this.id = id;
         this.nombre = nombre;
-        this.stock = stock;
         this.precio = precio;
+        this.stock = stock;
         this.img = img;
-        this.cantidad = cantidad;
+        this.categoria = categoria;
+        this.und = und;
     }
 }
 
-listaProductos.push(new producto (1,"Vodka", 10, 3200, "assets/vodka.jpg" , 1)); 
-listaProductos.push(new producto (2,"Gancia", 10, 1800, "assets/gancia.jpg" , 1));
-listaProductos.push(new producto (3,"Fernet", 10, 2200, "assets/fernet.jpg" , 1));
-listaProductos.push(new producto (4,"Gin", 10, 3000, "assets/gin.jpg" , 1));
-listaProductos.push(new producto (5,"Martini", 10, 2600, "assets/martini.jpg" , 1));
-listaProductos.push(new producto (6,"Ron", 10, 3300, "assets/ron.jpg" , 1));
+listaBebidas.push(new bebida (1 , "Absolut" , 3000 , 10 , "../assets/vodka.jpg" , "bebidas_blancas" , 1))
+listaBebidas.push(new bebida (2 , "Fernet" , 3000 , 10 , "../assets/fernet.jpg" , "aperitivo" ,1))
+listaBebidas.push(new bebida (3 , "Gancia" , 3000 , 10 , "../assets/gancia.jpg" , "aperitivo" ,1 ))
+listaBebidas.push(new bebida (4 , "Martini" , 3000 , 10 , "../assets/martini.jpg" , "licores" ,1))
+listaBebidas.push(new bebida (5 , "Havana club"  , 3000 , 10 , "../assets/ron.jpg" , "licores",1))
+listaBebidas.push(new bebida (6 , "Bombay" , 3000 , 10 , "../assets/gin.jpg" , "bebidas_blancas",1))
 
 
-console.log(listaProductos);
+
+console.log(listaBebidas);
