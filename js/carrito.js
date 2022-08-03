@@ -71,3 +71,32 @@ let restar_item = (e) => {
     actualizar_carrito();
     console.log(carrito)
 }
+
+let comprar = () => {
+
+    if(carrito.length === 0){
+        Swal.fire({
+            title: 'No hay nada en su carrito',
+            icon: 'error',
+            showCancelButton: false,
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Aceptar'
+          })
+    }else{
+        Swal.fire({
+            title: 'Finalizar compra?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Finalizar'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire(
+                'Compra finalizada!',
+                'Su pedido ya esta en camino'
+              )
+            }
+          })
+    }
+}

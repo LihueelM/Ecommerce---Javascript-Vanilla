@@ -98,3 +98,7 @@ let renderBebidasBlancas = () =>{
          btn_borrar.addEventListener("click", () => agregar_al_carrito(e.id)); 
     })        
 }
+
+let renderInicio = () => {
+    
+}
