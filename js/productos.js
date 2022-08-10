@@ -22,3 +22,4 @@ listaBebidas.push(new bebida (6 , "Bombay" , 3000 , 10 , "./assets/gin.jpg" , "b
 
 
 console.log(listaBebidas);
+/* check */
