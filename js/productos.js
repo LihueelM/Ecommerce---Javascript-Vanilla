@@ -1,5 +1,5 @@
+/* SCRIPT UTILIZADO COMO INVENTARIO */
 let listaBebidas = [];
-
 class bebida {
     constructor (id , nombre, precio, stock, img, categoria,und ){
         this.id = id;

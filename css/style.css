@@ -8,46 +8,75 @@ body{
     height: 100vh;
     background: url(../assets/banner.jpg);
     background-size: cover;
-    background-position: center;
 }
 /* Menu */
 #navbar__style{
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(35px);
+    background-color: rgba(100, 100, 100, 0.1);
+    height: 100px;
+    margin-bottom: 3rem;
 }
 #navbar__style a{
     color: #fff;
     font-size: 1.2rem;
 }
-#navbar__style .dropdown-menu{
-    background-color: rgba(0, 0, 0, 0.3);
+.temp p{
+    color: rgb(255, 253, 228);    
 }
-#navbar__style .dropdown-item {
-    color: #000;
+/* Categorias */
+.categorias ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
-.navbar-toggler{
-    background-color: rgba(255, 255, 255, 0.5);
+.categorias ul li{
+    list-style: none;
+    font-size: 1.5rem;
+    color: #0a0a0a;
+    margin:25px;
+    background-color: #ecdda2ec;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    text-align: center;
 }
+.categorias ul li:hover{
+    background-color: #c9b977;
+}
+
 /* OffCanvas Carrito */
 .offcanvas_shop{
     position: fixed;
-    backdrop-filter: blur(30px);
+    background-color: rgb(248, 248, 248);
     top: 0;
     right: 0;
-    width: 30vw;
+    width: 30%;
     height: 100vh;
     transform: translateX(100%);
     transition: all 0.5s ease;
+    color: #000;
+}
+.offcanvas_shop h2{
+    color: #000;
+    text-align: center;
 }
 .offcanvas_shop.active{
     transform: translateX(0);
+    overflow-y: scroll;
 }
 .btn-open{
-    text-align: center;
     height: 50px;
     width: 50px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 50%;    
+    background-color: #19191a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-open i{
+    color: gold;
 }
 .btn-close{
     position: absolute;
@@ -81,22 +110,43 @@ body{
 .main_instancia{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
-.container_card{    
-    width: 224px;
-    height: 224px;
-    margin: 60px 5px;
+.container_card{
+    display: flex;
+    flex-direction: column;    
+    margin: 1rem 2rem;
+}
+.container_card img{
+    width: 150px;
+    align-self: center;
 }
 .card{
-    width: 100%;
+    margin: 5px;
+    box-shadow: 0px 0px 4px 5px rgba(0,0,0,0.2) ;
     display: flex;
     flex-direction: column;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    background: #fff;
+    color: #000;
+    z-index: 0;
 }
 .card img {
     border-radius: 5px;
+}
+.descripcion_card{
+    font-size: 1.2rem;
+    color: #361755;
+}
+.css_btn{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    transition: all 0.5s;
+}
+.css_btn:active{
+    background-color: #19191a;
 }
 /* Carrito interno */
 #render_carrito{
@@ -123,9 +173,20 @@ td{
     color: #fff;
     background-color: rgba(100, 0, 0, 0.6);
 }
-.precioBebida{
+.container_compra{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: 500;
     font-size: 1.8rem;
-    color: #fff;
-    text-shadow: 0 0 20px #000;
+    color: #361755;
+}
+.container_compra button{
+    margin: 2rem 0;
+}
+.precioBebida{
+    display: flex;
+    justify-content: space-between;
 }
 

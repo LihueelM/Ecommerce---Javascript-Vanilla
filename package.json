@@ -1,0 +1,19 @@
+{
+  "name": "recetas-orwell",
+  "version": "1.0.0",
+  "description": "E-commers de bebidas alcohólicas y recetas. Proyecto realizado en el curso de Javascript de CoderHouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LihueelM/orwell-drinks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LihueelM/orwell-drinks/issues"
+  },
+  "homepage": "https://github.com/LihueelM/orwell-drinks#readme"
+}
