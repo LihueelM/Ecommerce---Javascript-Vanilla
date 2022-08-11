@@ -42,9 +42,9 @@ let actualizar_carrito = () => {
                 <h5 class="card-title">${e.nombre} $${e.precio}</h5>
                 <p class = "descripcion_card"> Unidades: ${e.und} Precio total: $${e.precio * e.und}</p>
                 <p></p>
-                <button onclick="agregar_al_carrito(${e.id})"class=" borrar_item css_btn"><i class="ion-ios-plus"></i></button>
-                <button onclick="restar_item(${e.id})"class=" css_btn"><i class="ion-ios-minus"></i></button>
-                <button onclick="eliminar_del_carrito(${e.id})"class=" css_btn"><i class="ion-trash-a"></i></button>                
+                <button onclick="agregar_al_carrito(${e.id})"class=" borrar_item css_btn"><i class="bi bi-bag-plus"></i></button>
+                <button onclick="restar_item(${e.id})"class=" css_btn"><i class="bi bi-dash-circle"></i></button>
+                <button onclick="eliminar_del_carrito(${e.id})"class=" css_btn"><i class="bi bi-trash"></i></button>                
                 </div>
             </div>
         </div>

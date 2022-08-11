@@ -22,7 +22,7 @@ let renderInicio = () => {
     section.innerHTML = `
     <section class = "container-fluid"> 
     <h2 class = "titulo"> LAS MEJORES BEBIDAS PARA LAS MEJORES PERSONAS </h2>
-    <p class = "presentacion">Somos Orwell Drink's </br> Una familia dedicada a llevar las mejores bebidas para que siempre disfrutes solo o en compañia del mejor sabor. Todo al alcance de un solo click</p>
+    <h3 class = "presentacion">Somos Orwell Drink's </br> Una familia dedicada a llevar las mejores bebidas para que siempre disfrutes solo o en compañia del mejor sabor. Todo al alcance de un solo click</h3>
     </section>`
     main_instancia.appendChild(section);
     
@@ -136,6 +136,6 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Buenos Aires&units=metr
         console.log(temperatura , ubicacion)
 
         let p_ubicacion = document.querySelector(".temp");
-        p_ubicacion.innerHTML=`<p>Ubicacion:${ubicacion} || Temperatura:${temperatura} `
+        p_ubicacion.innerHTML=`<p><i class="bi bi-geo"></i> Ubicacion: ${ubicacion} - Temperatura: ${temperatura} `
 
     })
